@@ -1,0 +1,28 @@
+body {
+  border-top: 30px solid #0f0f0f;
+  background-image: linear-gradient(
+    to right,
+    #737373 0%,
+    #d9d9d9 30% 70%,
+    #737373 100%
+  );
+  display: flex;
+  justify-content: center;
+  background-color: #0f0f0f;
+}
+
+.wrapper {
+  max-width: 1200px;
+  min-width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero_line {
+  width: 1200px;
+  min-width: 100px;
+  height: 5px;
+  background-color: #0f0f0f;
+  margin-bottom: 70px;
+}
+
