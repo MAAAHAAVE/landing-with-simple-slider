@@ -1,6 +1,6 @@
 const carousel = document.querySelector(".carousel"),
-  firstItem = carousel.querySelectorAll(".carousel-item")[0],
-  arrowIcons = document.querySelectorAll(".wrapper .fa-solid");
+  firstItem = carousel.querySelectorAll(".carousel__item")[0],
+  arrowIcons = document.querySelectorAll(".wrapper .buttons__button");
 
 let isDragStart = false,
   isDragging = false,

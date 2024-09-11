@@ -10,13 +10,12 @@ body {
   justify-content: center;
   background-color: #0f0f0f;
 }
-
 .wrapper {
   max-width: 1200px;
   min-width: 100px;
 }
 
-.hero_line {
+.hero__line {
   width: 1200px;
   min-width: 100px;
   height: 5px;

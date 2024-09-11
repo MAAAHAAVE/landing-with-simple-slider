@@ -1,4 +1,4 @@
-.hero_wrapper {
+.hero__wrapper {
   width: 1200px;
   height: 60px;
   margin-top: 50px;
@@ -6,18 +6,15 @@
   display: flex;
   justify-content: center;
 }
-
-a.hero_link-logo {
+div.hero__logo {
   left: 0;
   width: 340px;
   height: 60px;
 }
-
-.hero_menu {
+.hero__menu {
   position: absolute;
   background: transparent;
   border: none;
   right: 310px;
   cursor: pointer;
 }
-
