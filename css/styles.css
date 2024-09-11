@@ -14,8 +14,6 @@ body {
 .wrapper {
   max-width: 1200px;
   min-width: 100px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .hero_line {

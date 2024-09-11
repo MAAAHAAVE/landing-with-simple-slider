@@ -1,67 +1,94 @@
-const wrapper = document.querySelector(".wrapper");
-const carousel = document.querySelector(".carousel");
-const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const carouselChildren = [...carousel.children];
+const carousel = document.querySelector(".carousel"),
+  firstItem = carousel.querySelectorAll(".carousel-item")[0],
+  arrowIcons = document.querySelectorAll(".wrapper .fa-solid");
 
-let isDragging = false,
-  startX,
-  startScrollLeft,
-  timeoutId;
+let isDragStart = false,
+  isDragging = false,
+  previewX,
+  previewScrollLeft,
+  positionDiff;
 
-let cardPreview = Math.round(carousel.offsetWidth / firstCardWidth);
+const showHideIcons = () => {
+  let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+  arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+  arrowIcons[1].style.display =
+    carousel.scrollLeft == scrollWidth ? "none" : "block";
+};
 
-carouselChildren
-  .slice(-cardPreview)
-  .reverse()
-  .forEach((card) => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+arrowIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let firstItemWidth = firstItem.clientWidth + 14;
+    carousel.scrollLeft += icon.id == "left" ? -firstItemWidth : firstItemWidth;
+    setTimeout(() => showHideIcons(), 250);
   });
-
-carouselChildren.slice(0, cardPreview).forEach((card) => {
-  carousel.insertAdjacentHTML("beforeend", card.outerHTML);
 });
 
 const dragStart = (e) => {
-  isDragging = true;
+  isDragStart = true;
+  previewX = e.pageX || e.touches[0].pageX;
+  previewScrollLeft = carousel.scrollLeft;
   carousel.classList.add("dragging");
-  startX = e.pageX;
-  startScrollLeft = carousel.scrollLeft;
+  document.body.style.userSelect = "none";
 };
 
 const dragging = (e) => {
-  if (!isDragging) return;
-  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+  if (!isDragStart) return;
+  e.preventDefault();
+  isDragging = true;
+  positionDiff = (e.pageX || e.touches[0].pageX) - previewX;
+  carousel.scrollLeft = previewScrollLeft - positionDiff;
+  showHideIcons();
 };
 
 const dragStop = () => {
-  isDragging = false;
+  isDragStart = false;
   carousel.classList.remove("dragging");
+  document.body.style.userSelect = "auto";
+
+  if (!isDragging) return;
+  isDragging = false;
+
+  autoSlide();
 };
 
-const autoPlay = () => {
-  if (window.innerWidth < 800) return;
-  timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500)
-}
-autoPlay()
+const autoSlide = () => {
+  const itemWidth = firstItem.clientWidth + 14;
+  const scrollLeft = carousel.scrollLeft;
+  const index = Math.round(scrollLeft / itemWidth);
+  carousel.scrollLeft = index * itemWidth;
+};
 
-const infiniteScroll = () => {
-  if (carousel.scrollLeft === 0) {
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
-    carousel.classList.remove("no-transition");
-  } else if (
-    Math.ceil(carousel.scrollLeft) ===
-    carousel.scrollWidth - carousel.offsetWidth
-  ) {
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.offsetWidth;
-    carousel.classList.remove("no-transition");
+const handleMouseUp = () => {
+  dragStop();
+  document.removeEventListener("mouseup", handleMouseUp);
+  document.removeEventListener("mousemove", dragging);
+};
+
+showHideIcons();
+carousel.addEventListener("scroll", showHideIcons);
+
+carousel.addEventListener("mousedown", (e) => {
+  dragStart(e);
+  document.addEventListener("mouseup", handleMouseUp);
+  document.addEventListener("mousemove", dragging);
+});
+
+carousel.addEventListener("touchstart", dragStart);
+carousel.addEventListener("touchmove", dragging);
+carousel.addEventListener("touchend", dragStop);
+
+document.addEventListener("mousedown", (e) => {
+  if (e.target.closest(".carousel")) {
+    dragStart(e);
+    document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("mousemove", dragging);
   }
+});
 
-  clearTimeout(timeoutId)
-};
-
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("scroll", infiniteScroll);
+document.addEventListener("touchstart", (e) => {
+  if (e.target.closest(".carousel")) {
+    dragStart(e);
+    document.addEventListener("touchend", dragStop);
+    document.addEventListener("touchmove", dragging);
+  }
+});

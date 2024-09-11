@@ -1,82 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 body {
   display: flex;
-  align-items: center;
+  /* padding: 0 35px; */
+  /* align-items: center; */
   justify-content: center;
   min-height: 100vh;
-  padding: 0 35px;
+  background-color: #343f4f;
 }
-
-.wrapper {
-  min-width: 200px;
-  width: 100%;
+button {
+  border: none;
+  background-color: transparent;
 }
-
-.wrapper .carousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
-  gap: 16px;
-  overflow-x: scroll;
-  /* scroll-snap-type: x mandatory; */
-  /* scroll-behavior: smooth; */
-  scrollbar-width: none;
-  opacity: 0.8;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel.no-transition {
-  scroll-behavior: auto;
-}
-
-.carousel.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-
-.carousel.dragging .card {
-  cursor: grab;
-  user-select: none;
-}
-
-.carousel .card {
-  scroll-snap-align: start;
-  list-style: none;
-  background: #0f0f0f;
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.wrapper .fa-solid {
+  bottom: -60px;
+  height: 43px;
+  width: 43px;
   cursor: pointer;
-  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 45px;
+  background-color: #fff;
+  box-shadow: #000000 0 5px 10px 2px;
+  transition: 0.1s;
 }
 
-.card .img img {
-  height: 140px;
-  object-fit: cover;
+.wrapper .buttons {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.wrapper .carousel {
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 0;
+  scroll-behavior: smooth;
+  min-width: 1500px;
+  opacity: 1;
+  transform: translateX(-10%);
+}
+.carousel {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0% 2%,
+    black 10% 90%,
+    transparent 98% 100%
+  );
+}
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging .carousel-item {
+  pointer-events: none;
+}
+.carousel-item {
+  height: 250px;
+  margin-left: 14px;
+  width: calc(100% / 3 - 14px);
+  scroll-snap-align: start;
+  display: inline-block;
+}
+.carousel-item::selection {
+  background: transparent;
+}
+.carousel-item:first-child {
+  margin-left: 0;
+}
+.fa-solid:hover {
+  transform: translateY(-2px);
+  box-shadow: #000000 0 9px 10px 2px;
+}
+.fa-solid:active {
+  transform: translateY(2px);
+  box-shadow: #000000 0 0 0 0;
 }
 
-.card h2 {
-  font-weight: 700;
-  font-size: 3rem;
-  margin: 0 0 50px 0;
-}
-
-.card span {
-  color: #9a9a9a;
-}
-
-@media screen and (max-width: 1200px) {
-  .wrapper .carousel {
-    grid-auto-columns: calc((100% / 2) - 9px);
+@media screen and (max-width: 900px) {
+  .carousel-item {
+    width: calc(100% / 2 - 14px);
+    height: calc(100% / 2 - 14px);
   }
 }
 
-@media screen and (max-width: 700px) {
-  .wrapper .carousel {
-    grid-auto-columns: 100%;
+@media screen and (max-width: 600px) {
+  .carousel-item {
+    width: 100%;
+    height: 100%;
   }
+}
+
+#item-1 {
+  background-color: #000000;
+}
+#item-2 {
+  background-color: #151515;
+}
+#item-3 {
+  background-color: #2f2f2f;
+}
+#item-4 {
+  background-color: #474747;
+}
+#item-5 {
+  background-color: #7b7b7b;
+}
+#item-6 {
+  background-color: #858585;
+}
+#item-7 {
+  background-color: #999999;
+}
+#item-8 {
+  background-color: #b6b6b6;
+}
+#item-9 {
+  background-color: #ffffff;
 }
