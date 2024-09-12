@@ -1,22 +1,3 @@
-.wrapper .buttons__button {
-  bottom: -60px;
-  height: 43px;
-  width: 43px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  text-align: center;
-  line-height: 45px;
-  background-color: #fff;
-  box-shadow: #000000 0 5px 10px 2px;
-  transition: 0.1s;
-}
-
-.wrapper .buttons {
-  margin-top: 14px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-}
 .wrapper .carousel {
   white-space: nowrap;
   overflow: hidden;
@@ -48,6 +29,9 @@
   width: calc(100% / 3 - 14px);
   scroll-snap-align: start;
   display: inline-block;
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: inset#000000 0 0 10px 2px;
 }
 .carousel__item::selection {
   background: transparent;
@@ -58,13 +42,38 @@
 .carousel__item:last-child {
   margin-right: 150px;
 }
+.wrapper .buttons {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.wrapper .buttons__button {
+  bottom: -60px;
+  height: 43px;
+  width: 43px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 45px;
+  background-color: rgba(97, 97, 97, 0.9);
+  box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px 1px;
+  transition: 0.1s;
+  color: rgb(255, 255, 255);
+  
+}
+.buttons p {
+  text-shadow: 0 0 3px rgb(0, 0, 0)
+}
 .buttons__button:hover {
   transform: translateY(-2px);
-  box-shadow: #000000 0 9px 10px 2px;
+  background-color: rgba(100, 100, 100, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 9px 10px 1px;
 }
 .buttons__button:active {
   transform: translateY(2px);
-  box-shadow: #000000 0 0 0 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0;
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 900px) {
@@ -81,7 +90,7 @@
   }
 }
 
-#item-1 {
+/* #item-1 {
   background-color: #000000;
 }
 #item-2 {
@@ -107,4 +116,4 @@
 }
 #item-9 {
   background-color: #ffffff;
-}
+} */

@@ -6,15 +6,18 @@
   display: flex;
   justify-content: center;
 }
-div.hero__logo {
-  left: 0;
-  width: 340px;
-  height: 60px;
+.hero__line {
+  width: 1200px;
+  min-width: 100px;
+  height: 5px;
+  background-color: #0f0f0f;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: end;
+  
 }
 .hero__menu {
-  position: absolute;
-  background: transparent;
-  border: none;
-  right: 310px;
   cursor: pointer;
+  margin-top: -135px;
+
 }

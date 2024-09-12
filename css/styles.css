@@ -1,5 +1,6 @@
 body {
   border-top: 30px solid #0f0f0f;
+  border-bottom: 0;
   background-image: linear-gradient(
     to right,
     #737373 0%,
@@ -7,19 +8,24 @@ body {
     #737373 100%
   );
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  background-color: #0f0f0f;
+  align-content: space-between;
+  height: calc(100vh);
+}
+.img__wrapper {
+  position: absolute;
+  z-index: -1;
+}
+.img__wrapper .body__img {
+  max-height: 90vh;
+  width: 1250px;
+  object-fit: cover;
+  opacity: 0.5;
 }
 .wrapper {
   max-width: 1200px;
   min-width: 100px;
 }
 
-.hero__line {
-  width: 1200px;
-  min-width: 100px;
-  height: 5px;
-  background-color: #0f0f0f;
-  margin-bottom: 70px;
-}
 

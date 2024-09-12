@@ -1,0 +1,23 @@
+footer.footer {
+  width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+  background-color: #0f0f0f;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.footer__wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 55px;
+}
+.footer__h1 {
+ cursor: pointer;
+}
+.footer__qr--mini img{
+  width: 80px;
+  display:block;
+}

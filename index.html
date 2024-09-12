@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/slider.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
     <title>Document</title>
     <script src="/script.js" defer></script>
   </head>
   <body>
+    <div class="img__wrapper">
+      <img class="body__img" src="/img/background-photo.png" alt="" />
+    </div>
     <div class="wrapper">
       <div class="hero__wrapper">
         <div class="hero__logo">
           <img src="/img/SIMON PORRI logo.svg" alt="" />
         </div>
+      </div>
+      <div class="hero__line">
         <button class="hero__menu">
           <img src="/img/burger-menu-black.svg" alt="" />
         </button>
       </div>
-      <div class="hero__line"></div>
       <div class="carousel">
         <div class="carousel__item" id="item-1"></div>
         <div class="carousel__item" id="item-2"></div>
@@ -33,11 +38,22 @@
         <div class="carousel__item" id="item-9"></div>
       </div>
       <div class="buttons">
-        <button id="left" class="buttons__button buttons__button--left"><<</button>
-        <button id="right" class="buttons__button buttons__button--right">>></button>
+        <button id="left" class="buttons__button buttons__button--left">
+          <p><<</p>
+        </button>
+        <button id="right" class="buttons__button buttons__button--right">
+          <p>>></p>
+        </button>
       </div>
     </div>
-
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <h1 class="footer__h1">adress</h1>
+        <div class="footer__qr--mini">
+          <img src="http://qrcoder.ru/code/?https%3A%2F%2Flanding-with-simple-slider.vercel.app%2F&4&0" alt="">
+        </div>
+        <h1 class="footer__h1">whatsapp</h1>
+      </div>
+    </footer>
   </body>
 </html>
