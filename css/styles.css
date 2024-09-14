@@ -13,11 +13,11 @@ body {
   align-content: space-between;
   height: calc(100vh);
 }
-.img__wrapper {
+.background__wrapper {
   position: absolute;
   z-index: -1;
 }
-.img__wrapper .body__img {
+.background__wrapper .background__img {
   max-height: 90vh;
   width: 1250px;
   object-fit: cover;
@@ -26,6 +26,7 @@ body {
 .wrapper {
   max-width: 1200px;
   min-width: 100px;
+  height: 85%;
 }
 
 

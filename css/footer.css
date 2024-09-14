@@ -1,4 +1,4 @@
-footer.footer {
+.footer {
   width: 100%;
   min-height: 100px;
   max-height: 200px;
@@ -12,12 +12,30 @@ footer.footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 55px;
+  padding-left: 35px;
 }
 .footer__h1 {
- cursor: pointer;
+  transition: 0.1s;
+  cursor: pointer;
+  font-weight: 600;
+  text-shadow: rgb(133, 133, 133) 2px 2px 1px;
 }
-.footer__qr--mini img{
-  width: 80px;
-  display:block;
+.footer__h1:hover {
+  transform: translateY(-2px);
+}
+.footer__h1:active {
+  transform: translateY(2px);
+  color: #acdc0f;
+  text-shadow: #4a6100 2px 2px 1px;
+}
+.footer__qr--mini img {
+  border-radius: 10px;
+  width: 90px;
+  display: block;
+  margin: 0 10px;
+  transition: 0.2s;
+
+}
+.footer__qr--mini img:hover {
+  transform: translateY(-100%) scale(3);
 }

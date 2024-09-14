@@ -1,6 +1,6 @@
 const carousel = document.querySelector(".carousel"),
   firstItem = carousel.querySelectorAll(".carousel__item")[0],
-  arrowIcons = document.querySelectorAll(".wrapper .buttons__button");
+  arrowIcons = document.querySelectorAll(".buttons__button");
 
 let isDragStart = false,
   isDragging = false,
@@ -52,10 +52,12 @@ const dragStop = () => {
 };
 
 const autoSlide = () => {
-  const itemWidth = firstItem.clientWidth + 14;
-  const scrollLeft = carousel.scrollLeft;
-  const index = Math.round(scrollLeft / itemWidth);
-  carousel.scrollLeft = index * itemWidth;
+  requestAnimationFrame(() => {
+    const itemWidth = firstItem.clientWidth + 14;
+    const scrollLeft = carousel.scrollLeft;
+    const index = Math.round(scrollLeft / itemWidth);
+    carousel.scrollLeft = index * itemWidth;
+  });
 };
 
 const handleMouseUp = () => {
