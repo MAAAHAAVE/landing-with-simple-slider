@@ -19,9 +19,3 @@ fetch("experience.json")
       }
     });
   });
-
-
-
-carousel.addEventListener("mouseup", () => {
-  
-});

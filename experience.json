@@ -11,7 +11,37 @@
   },
   {
     "name": "KRESTEN ROYAL",
-    "description": "<span>“HOTEL KRESTEN ROYAL 5 STARS”</span> –  (GREECE,RODHOS)<br>– Responsible Bartender and Waiter.",
+    "description": "<span>“HOTEL KRESTEN ROYAL 5 STARS”</span> –  (GREECE, RODHOS)<br>– Responsible Bartender and Waiter",
+    "worktime": "<p>01.03.17</p> >> <p>22.11.17</p>"
+  },
+  {
+    "name": "KRESTEN PALACE",
+    "description": "<span>“HOTEL KRESTEN PALACE 4 STARS”</span> –  (GREECE, RODHOS)<br>–  Bartender and Waiter",
+    "worktime": "<p>03.03.16</p> >> <p>03.10.16</p>"
+  },
+  {
+    "name": "FUEGO DISCOPUB",
+    "description": "<span>“FUEGO DISCOPUB”</span> –  (GREECE, RODHOS)<br>– Responsible Bartender.",
+    "worktime": "<p>01.03.17</p> >> <p>22.11.17</p>"
+  },
+  {
+    "name": "“LA TORRE DELLE CIVETTE RESTAURANT",
+    "description": "<span>“LA TORRE DELLE CIVETTE RESTAURANT”</span> –  (FLORENCE,ITALY)<br>– Responsible Waiter and Bartender.",
+    "worktime": "<p>01.03.17</p> >> <p>22.11.17</p>"
+  },
+  {
+    "name": "FUEGO DISCOPUB",
+    "description": "<span>“FUEGO DISCOPUB”</span> –  (GREECE, RODHOS)<br>– Responsible Bartender.",
+    "worktime": "<p>01.03.17</p> >> <p>22.11.17</p>"
+  },
+  {
+    "name": "FUEGO DISCOPUB",
+    "description": "<span>“FUEGO DISCOPUB”</span> –  (GREECE, RODHOS)<br>– Responsible Bartender.",
+    "worktime": "<p>01.03.17</p> >> <p>22.11.17</p>"
+  },
+  {
+    "name": "FUEGO DISCOPUB",
+    "description": "<span>“FUEGO DISCOPUB”</span> –  (GREECE, RODHOS)<br>– Responsible Bartender.",
     "worktime": "<p>01.03.17</p> >> <p>22.11.17</p>"
   }
 ]

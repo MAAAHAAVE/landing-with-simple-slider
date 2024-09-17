@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: opacity 0.3s;
 }
 .description__item--place {
   font-size: 1.4rem;
@@ -23,13 +24,16 @@
 }
 .description__background--time {
   padding: 5px 10px;
-  background-color: #acdc0f99;
+  font-weight: 600;
+  background-color: #dc9b0f90;
+  background: linear-gradient(
+    60deg,
+    #4a610090 0 6.5%,
+    transparent 7% 90%,
+    #87dc0f90 90.5% 100%
+  );
   border: 2px solid #0f0f0f;
   box-shadow: rgb(0, 0, 0) 3px 3px 0 0px;
-}
-.description__background--time:hover{
-  transition:0.2s;
-  filter: blur(2px);
 }
 .description__item--time {
   width: 230px;

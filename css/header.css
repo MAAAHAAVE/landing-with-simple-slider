@@ -11,15 +11,8 @@
   min-width: 100px;
   height: 3px;
   background-color: #0f0f0f;
-  margin-bottom: 70px;
   display: flex;
   justify-content: end;
-}
-.hero__menu {
-  margin-top: -97px;
-}
-.hero__button {
-  cursor: pointer;
 }
 .hero__logo {
   margin: 0 auto;
@@ -29,4 +22,62 @@
 }
 .hero__logo img:hover {
   transform: scale(1.1);
+}
+.hero__menu {
+  margin-top: -97px;
+}
+.hero__button {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero__menu--inner {
+  display: none;
+}
+.hero__menu--inner img {
+  width: 50px;
+}
+.hero__button:hover > .hero__menu--inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  align-items: flex-end;
+
+  background-color: #0f0f0f;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 1.3rem;
+}
+li {
+  width: 300px;
+  list-style: none;
+  padding: 0px 20px;
+}
+li:first-child {
+  padding-top: 10px;
+}
+li:last-child {
+  padding-bottom: 50px;
+}
+.a2, .b2, .c2, .d2{
+  font-size: 0;
+  transition: font-size 0.3s ease;
+}
+.a1:hover + .a2{
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+.b1:hover + .b2{
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+.c1:hover + .c2{
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+.d1:hover + .d2{
+  font-size: 1.3rem;
+  font-weight: 200;
 }
