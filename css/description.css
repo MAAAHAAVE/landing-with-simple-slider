@@ -41,12 +41,15 @@
   display: flex;
   justify-content: space-evenly;
 }
-
-@keyframes descriptionDrop {
-  from {
-
-  }
-  to {
-
-  }
+.description__string {
+  margin: 30px 50px;
+  max-width: 1500px;
+  background-color: #ffffff7e;
+  border: 1px dashed #0f0f0f;
+  padding: 10px;
+}
+.description__string--text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #0f0f0f;
 }

@@ -45,7 +45,21 @@ body {
 }
 
 @media screen and (max-width: 1250px) {
-  .swipe__string {
+  .footer {
+    justify-content: start !important;
+  }
+  .footer__wrapper {
+    width: 0 !important;
+    gap: 15px;
+  }
+  .footer__popup {
+    text-wrap: nowrap !important;
+  }
+  .footer__qr--mini {
+    display: none !important;
+    width: 0 !important;
+  }
+  .description__string {
     min-width: 600px !important;
   }
   .wrapper .carousel {
@@ -60,9 +74,8 @@ body {
   }
   .background__img {
     width: 800px !important;
-    /* position: absolute !important; */
   }
-  .swipe__string--text {
+  .description__string--text {
     font-size: 1.5rem !important;
   }
   .description__item--place {
@@ -77,10 +90,13 @@ body {
   .carousel__item:last-child {
     margin-right: 20px !important;
   }
+  .wrapper {
+    height: 200% !important;
+  }
 }
 
 @media screen and (max-width: 800px) {
-  .swipe__string {
+  .description__string {
     min-width: 600px !important;
   }
   .wrapper .carousel {
@@ -94,12 +110,15 @@ body {
     display: none;
     /* position: absolute !important; */
   }
-  .swipe__string--text {
+  .description__string--text {
     font-size: 1rem !important;
   }
   .description__item {
     gap: 15px;
     flex-direction: column !important;
+  }
+  .footer {
+    /* min-height: 20vh !important; */
   }
   .footer__h1 {
     font-size: 1rem !important;
@@ -122,10 +141,10 @@ body {
 }
 
 @media screen and (max-width: 650px) {
-  .swipe__string {
-    min-width: 400px !important;
-    padding: 10px !important;
-    margin: 0 auto !important;
+  .description__string {
+    min-width: 0 !important;
+    margin: 0 !important;
+    margin-top: 20px !important;
   }
   .wrapper .carousel {
     min-width: 400px !important;
@@ -142,12 +161,12 @@ body {
     display: none !important;
     /* position: absolute !important; */
   }
-  .swipe__string--text {
+  .description__string--text {
     font-size: 0.8rem !important;
-    max-width: 400px !important;
+    /* max-width: 400px !important; */
   }
   .description__item {
-    gap: 15px;
+    gap: 15px !important;
     flex-direction: column !important;
   }
   .footer__wrapper {
@@ -168,11 +187,11 @@ body {
   } */
 }
 @media screen and (max-width: 400px) {
-  .swipe__string {
-    margin: 0;
-    padding: 0;
+  .description__string {
+    margin: 0 !important;
+    padding: 0 !important;
     margin: 20px 0 !important;
-    min-width: 0 !important;
+    /* min-width: 0 !important; */
   }
   .wrapper .carousel {
     max-width: 400px !important;
@@ -189,9 +208,9 @@ body {
     padding: 40px 0 !important;
     font-size: 1.1rem !important;
   }
-  .swipe__string--text {
+  .description__string--text {
     font-size: 0.8rem !important;
-    max-width: 350px !important;
+    /* max-width: 350px !important; */
     margin: 0;
     padding: 0;
   }
@@ -207,9 +226,9 @@ body {
   }
   .footer {
     justify-content: flex-start !important;
-    height: 50% !important;
+    /* height: 50% !important; */
   }
   body {
-    height: 100vh;
+    /* height: 100vh; */
   }
 }
