@@ -93,6 +93,9 @@ body {
   .wrapper {
     height: 200% !important;
   }
+  body {
+    min-height: 1000px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -138,6 +141,9 @@ body {
   .footer {
     justify-content: flex-start !important;
   }
+  body {
+    min-height: 800px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -182,9 +188,9 @@ body {
     justify-content: flex-start !important;
     padding-left: 5px !important;
   }
-  /* p {
-    font-size: 1rem !important;
-  } */
+  body {
+    min-height: 800px;
+  }
 }
 @media screen and (max-width: 400px) {
   .description__string {
@@ -229,6 +235,6 @@ body {
     /* height: 50% !important; */
   }
   body {
-    /* height: 100vh; */
+    min-height: 800px;
   }
 }
