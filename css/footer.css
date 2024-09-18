@@ -8,7 +8,7 @@
   color: white;
   display: flex;
   justify-content: center;
-  
+  position: fixed;
 }
 .footer__wrapper {
   width: 50%;
